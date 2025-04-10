@@ -1,10 +1,10 @@
 import { Outlet } from "react-router";
-import { Header } from "./Header";
+import ResponsiveNavbar from "./ResponsiveNavbar";
 
 export function Layout() {
   return (
     <>
-      <Header />
+      <ResponsiveNavbar />
       <main>
         <Outlet />
       </main>
