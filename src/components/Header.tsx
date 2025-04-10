@@ -11,7 +11,7 @@ export function Header() {
           <Link to="/fortune-cookie">Fortune Cookie</Link>
         </li>
         <li>
-          <Link to="/b">B</Link>
+          <Link to="/crystal-ball">Crystal Ball</Link>
         </li>
         <li>
           <Link to="/c">C</Link>

@@ -1,7 +1,6 @@
 nav {
   background-color: #333;
   overflow: hidden;
-  position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
@@ -42,5 +41,4 @@ body {
 
 main {
   margin: 8px;
-  padding-top: 50px; /* To prevent content from being hidden under the fixed nav bar */
 }
