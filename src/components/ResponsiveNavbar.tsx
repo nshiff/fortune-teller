@@ -32,8 +32,8 @@ export default function ResponsiveNavbar() {
           <Link to="/crystal-ball" onClick={toggleMenu} className="nav-link">
             Crystal Ball
           </Link>
-          <Link to="/c" onClick={toggleMenu} className="nav-link">
-            Route C
+          <Link to="/tarot-cards" onClick={toggleMenu} className="nav-link">
+            Tarot Cards
           </Link>
         </nav>
       </div>

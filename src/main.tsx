@@ -5,7 +5,7 @@ import App from "./App.tsx";
 import { BrowserRouter, Routes, Route } from "react-router";
 import { FortuneCookie } from "./routes/FortuneCookie.tsx";
 import { CrystalBall } from "./routes/CrystalBall.tsx";
-import { RouteC } from "./routes/RouteC.tsx";
+import { TarotCards } from "./routes/TarotCards.tsx";
 import { Layout } from "./components/Layout.tsx";
 
 createRoot(document.getElementById("root")!).render(
@@ -16,7 +16,7 @@ createRoot(document.getElementById("root")!).render(
           <Route index element={<App />} />
           <Route path="fortune-cookie" element={<FortuneCookie />} />
           <Route path="crystal-ball" element={<CrystalBall />} />
-          <Route path="c" element={<RouteC />} />
+          <Route path="tarot-cards" element={<TarotCards />} />
         </Route>
       </Routes>
     </BrowserRouter>
