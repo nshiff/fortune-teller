@@ -101,5 +101,5 @@ const FORTUNES = [
 
 export function FortuneCookie() {
   const randomFortune = FORTUNES[Math.floor(Math.random() * FORTUNES.length)];
-  return <div>{randomFortune}</div>;
+  return <p>{randomFortune}</p>;
 }

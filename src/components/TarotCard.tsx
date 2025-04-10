@@ -13,8 +13,11 @@ export function TarotCard({
   return (
     <div className="tarot-card">
       <div>
-        {era}: {tarotCard.name}
-        {isReversed ? ", reversed" : ""}
+        {era}:{" "}
+        <strong>
+          {tarotCard.name}
+          {isReversed ? ", reversed" : ""}
+        </strong>
       </div>
       <em>
         {isReversed ? tarotCard.reversedMeaning : tarotCard.uprightMeaning}
