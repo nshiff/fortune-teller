@@ -8,7 +8,7 @@ export function Header() {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/a">A</Link>
+          <Link to="/fortune-cookie">Fortune Cookie</Link>
         </li>
         <li>
           <Link to="/b">B</Link>
