@@ -1,4 +1,4 @@
-export type TarotCard = {
+export type TarotCardInterface = {
   id: number;
   name: string;
   arcana: string;
@@ -8,7 +8,7 @@ export type TarotCard = {
   reversedMeaning: string;
 };
 
-export const tarotDeck: TarotCard[] = [
+export const tarotDeck: TarotCardInterface[] = [
   // Major Arcana (22 cards)
   {
     id: 0,

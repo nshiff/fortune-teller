@@ -1,12 +1,48 @@
+import { useEffect, useState } from "react";
 import { TarotCard } from "../components/TarotCard";
-import { tarotDeck } from "../constants/tarot";
+import { type TarotCardInterface, tarotDeck } from "../constants/tarot";
 
 export function TarotCards() {
+  const [cardPast, setCardPast] = useState<TarotCardInterface | null>(null);
+  const [cardPresent, setCardPresent] = useState<TarotCardInterface | null>(
+    null
+  );
+  const [cardFuture, setCardFuture] = useState<TarotCardInterface | null>(null);
+
+  useEffect(() => {
+    const index1 = Math.floor(Math.random() * tarotDeck.length);
+
+    // logic to avoid duplicates, i.e. picking the same card twice
+    let index2 = index1;
+    while (index2 === index1) {
+      index2 = Math.floor(Math.random() * tarotDeck.length);
+    }
+
+    let index3 = index2;
+    while (index3 === index2 || index3 === index1) {
+      index3 = Math.floor(Math.random() * tarotDeck.length);
+    }
+
+    setCardPast(tarotDeck[index1]);
+    setCardPresent(tarotDeck[index2]);
+    setCardFuture(tarotDeck[index3]);
+  }, []);
+
+  if (!cardPast || !cardPresent || !cardFuture) {
+    return null;
+  }
+
   return (
     <div>
-      <TarotCard era="Past" tarotCard={tarotDeck[40]} isReversed={false} />
-      <TarotCard era="Present" tarotCard={tarotDeck[41]} isReversed={true} />
-      <TarotCard era="Future" tarotCard={tarotDeck[42]} isReversed={false} />
+      <p>
+        <em>
+          Reflect on the cards you drew and see what kind of story they tell
+          you.
+        </em>
+      </p>
+      <TarotCard era="Past" tarotCard={cardPast} isReversed={false} />
+      <TarotCard era="Present" tarotCard={cardPresent} isReversed={true} />
+      <TarotCard era="Future" tarotCard={cardFuture} isReversed={false} />
     </div>
   );
 }

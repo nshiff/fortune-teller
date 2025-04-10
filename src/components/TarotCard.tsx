@@ -1,4 +1,4 @@
-import { type TarotCard } from "../constants/tarot";
+import { type TarotCardInterface } from "../constants/tarot";
 import "./TarotCard.css";
 
 export function TarotCard({
@@ -7,7 +7,7 @@ export function TarotCard({
   isReversed,
 }: {
   era: string;
-  tarotCard: TarotCard;
+  tarotCard: TarotCardInterface;
   isReversed: boolean;
 }) {
   return (
