@@ -14,7 +14,7 @@ export default function ResponsiveNavbar() {
     <header className="navbar">
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
-          Fortune Teller
+          Simple Fortune Teller
         </Link>
 
         <button
