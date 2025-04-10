@@ -1,4 +1,5 @@
 import { type TarotCard } from "../constants/tarot";
+import "./TarotCard.css";
 
 export function TarotCard({
   era,
@@ -10,7 +11,7 @@ export function TarotCard({
   isReversed: boolean;
 }) {
   return (
-    <p>
+    <div className="tarot-card">
       <div>
         {era}: {tarotCard.name}
         {isReversed ? ", reversed" : ""}
@@ -18,6 +19,6 @@ export function TarotCard({
       <em>
         {isReversed ? tarotCard.reversedMeaning : tarotCard.uprightMeaning}
       </em>
-    </p>
+    </div>
   );
 }
