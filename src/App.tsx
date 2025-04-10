@@ -1,5 +1,15 @@
 function App() {
-  return <div>Hello world!</div>;
+  return (
+    <div>
+      <em>Welcome to Fortune Teller</em>
+      <p>
+        <em>
+          Harnessing the power of Netlify and `Math.random` to bring fortunes to
+          the masses.
+        </em>
+      </p>
+    </div>
+  );
 }
 
 export default App;
