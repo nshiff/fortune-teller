@@ -6,17 +6,18 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import { RouteA } from "./routes/RouteA.tsx";
 import { RouteB } from "./routes/RouteB.tsx";
 import { RouteC } from "./routes/RouteC.tsx";
-import { Header } from "./components/Header.tsx";
+import { Layout } from "./components/Layout.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
-      <Header />
       <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/a" element={<RouteA />} />
-        <Route path="/b" element={<RouteB />} />
-        <Route path="/c" element={<RouteC />} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<App />} />
+          <Route path="a" element={<RouteA />} />
+          <Route path="b" element={<RouteB />} />
+          <Route path="c" element={<RouteC />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   </StrictMode>
