@@ -1,0 +1,4 @@
+# This redirects all routes to index.html with a 200 status code
+# Necessary for single-page applications (SPAs) using client-side routing
+# Without this, direct navigation to non-root routes would return 404 errors
+/* /index.html 200
