@@ -34,12 +34,6 @@ export function TarotCards() {
 
   return (
     <div>
-      <p>
-        <em>
-          Reflect on the cards you drew and see what kind of story they tell
-          you.
-        </em>
-      </p>
       <TarotCard era="Past" tarotCard={cardPast} isReversed={false} />
       <TarotCard era="Present" tarotCard={cardPresent} isReversed={true} />
       <TarotCard era="Future" tarotCard={cardFuture} isReversed={false} />
